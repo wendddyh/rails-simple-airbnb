@@ -1,0 +1,47 @@
+<%= render: navbar %>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Flats</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+        <p>All 115 flats.</p>
+    </div>
+  </div>
+
+  <div class="row">
+
+      <div class="flat-card">
+        <% @flats.each do|flat| %>
+          <div class="col-md-3" id="individual_card">
+            <div class="flat-card-content">
+              <div class="flat-card-image" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
+              <div class="card-body">
+                <h4>Light & Spacious Garden Flat London</h4>
+                <p><%= flat.address %></p>
+              </div>
+              <div class="flex">
+                <div class="flex align-items-center">
+                  <i class="fa-solid fa-people-line"></i>
+                  <span>3</span>
+                </div>
+                <div class="flex align-items-center ms-3">
+                  <i class="fa-solid fa-euro-sign"></i>
+                  <span>75</span>
+                </div>
+              </div>
+            </div>
+            <div class="flat-card-actions">
+              <%= link_to "More Info", flat_path %>
+              <%= link_to "Edit", edit_flat_path %>
+              <%= link_to article_path(@article), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>

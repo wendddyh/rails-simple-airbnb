@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+ /* navigation menu */
+
+ @import "bootstrap";
+ @import "font-awesome";
+
+ .bg-light{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+}
+
+.navbar>.container-fluid{
+  background:beige;
+}
+
+/* body container */
+ .container{
+display: grid;
+}
+
+/* card section */
+.row>* {
+ display: contents;
+}
+
+
+.flat-card{
+  display:contents;
+}
+
+
+#individual_card{
+  border-style: groove;
+}
